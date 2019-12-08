@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 .button-success,
 .button-error,
 .button-warning,
@@ -17,6 +19,8 @@
 
 .centerRight {
   top: 50% !important;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .centerRight #feedbackTrigger {
@@ -24,9 +28,13 @@
 }
 .bottomRight {
   top: 100% !important;
+  -webkit-transform: translateY(-115%);
+  -ms-transform: translateY(-115%);
   transform: translateY(-115%);
 }
 .bottomLeft-feedbacktrigger {
+  -webkit-transform: rotate(90deg) translateX(-50%) !important;
+  -ms-transform: rotate(90deg) translateX(-50%) !important;
   transform: rotate(90deg) translateX(-50%) !important;
   right: unset;
   left: 413px;
@@ -37,6 +45,8 @@
 .bottomLeft-feedbacktrigger span {
   top: 27px;
   left: 50% !important;
+  -webkit-transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
   transform: rotate(90deg) !important;
 }
 .bottomRight-feedbacktrigger {
@@ -47,7 +57,11 @@
   left: -368px;
   right: unset !important;
   top: 100% !important;
+  -webkit-transform: translateY(-115%);
+  -ms-transform: translateY(-115%);
   transform: translateY(-115%);
+  -webkit-transition: all 0.5s ease !important;
+  -o-transition: all 0.5s ease !important;
   transition: all 0.5s ease !important;
 }
 .showDrawer-left {
@@ -58,12 +72,17 @@
   left: -370px;
   right: unset !important;
   top: 50% !important;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease !important;
+  -o-transition: all 0.5s ease !important;
   transition: all 0.5s ease !important;
 }
 
 #feedbackDrawer {
   background: #fff;
+  -webkit-box-shadow: 0 0 0.42857rem 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.42857rem 0 rgba(0, 0, 0, 0.2);
   color: rgb(47, 57, 65);
   border: 2px solid #fff;
@@ -76,7 +95,6 @@
 
   /*	position transition for slide*/
   -webkit-transition: right 0.5s ease;
-  -moz-transition: right 0.5s ease;
   -o-transition: right 0.5s ease;
   transition: right 0.5s ease;
 }
@@ -139,6 +157,7 @@
   white-space: nowrap;
   min-width: 245px;
   text-align: center;
+  -webkit-box-shadow: 0 6px 2px -4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 6px 2px -4px rgba(0, 0, 0, 0.2);
 }
 #feedbackDrawer.showDrawer #feedbackForm label.error:before,
@@ -186,13 +205,16 @@
   font-weight: 300;
   position: absolute;
   padding: 8px 15px 12px;
+  -webkit-transform: rotate(-90deg) translateX(-50%);
+  -ms-transform: rotate(-90deg) translateX(-50%);
   transform: rotate(-90deg) translateX(-50%);
+  -webkit-transform-origin: left top 0;
+  -ms-transform-origin: left top 0;
   transform-origin: left top 0;
   top: 50%;
   width: auto;
   /*	background transition for hover*/
   -webkit-transition: background 0.5s ease;
-  -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
@@ -238,6 +260,7 @@
   position: relative;
   font-size: 16px;
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .btn:after {
@@ -250,6 +273,7 @@
   border-radius: inherit;
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 .btn:before {
@@ -260,6 +284,7 @@
   left: 0;
   top: 0;
   -webkit-transform: translateY(5px);
+  -ms-transform: translateY(5px);
   transform: translateY(5px);
   background-color: inherit;
   border-radius: 5px;
