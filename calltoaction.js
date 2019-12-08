@@ -58,6 +58,8 @@ document.getElementsByTagName("head")[0].appendChild(css);
             $feedTrigger.addClass("bottomRight-feedbacktrigger");
           $feedTrigger.click(showDrawer);
           $feedDrawer.addClass(position);
+          // for different frowser
+          $feedDrawer.addClass("isie");
         });
       }
 
