@@ -97,31 +97,13 @@ setTimeout(function() {
           $drawer += "<h2>Ask Alexa to order</h2>";
           //create form
           $drawer += '<div id="feedbackForm">';
-          $drawer += "<form>";
           $drawer +=
-            '<input type="text" class="field" name="description" id="description" placeholder="Short Description (required)">';
-          $drawer +=
-            '<input type="hidden" name="userId" value="' +
-            feedSessInfo.userId +
-            '" />';
+            '<div class="drawer-content"><h4>This is a sub heading</h4>\
+          <P>This is a dummy paragraph about alexa.<br/> smart feedback system .</P></div>';
           $drawer += '<button class="btn">Submit</button>';
           $drawer += "</form>";
           $drawer += "</div>";
           //end form
-          //create success message
-          $drawer += '<div id="feedbackSuccess">';
-          $drawer += "<h2>Thank You</h2>";
-          $drawer += "<p>Your feedback was successfully submitted</p>";
-          $drawer += "<button>Submit More Feedback</button>";
-          $drawer += "</div>";
-          //end message
-          //create error message
-          $drawer += '<div id="feedbackError">';
-          $drawer += "<h2>Aw, Snap!</h2>";
-          $drawer += "<p>There was an error submitting your feedback</p>";
-          $drawer += "<button>Try Again</button>";
-          $drawer += "</div>";
-          //end message
           //create trigger
           $drawer += '<div id="feedbackTrigger">' + triggerText;
           $drawer += '<span id="close">&raquo;</span>';
@@ -149,7 +131,7 @@ setTimeout(function() {
         }
         // 4 classes "centerRight","bottomRight", "bottomLeft", "centerLeft"
 
-        callDrawer("centerRight", "Ask Alexa to book service");
+        callDrawer("centerLeft", "Ask Alexa to book service");
       }
     };
 
