@@ -37,7 +37,6 @@
   -ms-transform: rotate(90deg) translateX(-50%) !important;
   transform: rotate(90deg) translateX(-50%) !important;
   right: unset;
-  left: 413px;
   text-align: center;
   text-align: center;
   min-width: 275px !important;
@@ -49,12 +48,8 @@
   -ms-transform: rotate(90deg) !important;
   transform: rotate(90deg) !important;
 }
-.bottomRight-feedbacktrigger {
-  top: 128px !important;
-  left: -49px;
-}
+
 .bottomLeft {
-  left: -368px;
   right: unset !important;
   top: 100% !important;
   -webkit-transform: translateY(-115%);
@@ -85,11 +80,8 @@
   -webkit-box-shadow: 0 0 0.42857rem 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 0.42857rem 0 rgba(0, 0, 0, 0.2);
   color: rgb(47, 57, 65);
-  border: 2px solid #fff;
-  border-right: none;
   font-family: monospace;
   position: fixed;
-  right: -370px;
   top: 100px;
   z-index: 100000;
 
@@ -108,7 +100,7 @@
   border-radius: 5px 5px 0px 0px;
 }
 #feedbackDrawer.showDrawer {
-  right: 0px;
+  right: 0px !important;
 }
 #feedbackDrawer.loading {
   background: #d3d3d3 url(images/loading.gif) no-repeat center center;

@@ -6,6 +6,10 @@ var css = document.createElement("link");
 css.href = "drawerStyle.css";
 css.rel = "stylesheet";
 document.getElementsByTagName("head")[0].appendChild(css);
+// add JQuery
+// var jquer = document.createElement("script");
+// jquer.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js";
+// document.getElementsByTagName("head")[0].appendChild(jquer);
 
 (function() {
   var apiUrl = "http://localhost:3000";
@@ -52,14 +56,28 @@ document.getElementsByTagName("head")[0].appendChild(css);
           createFeedbackForm(trigger);
           if (position === "centerLeft" || position === "bottomLeft") {
             $feedTrigger.addClass("bottomLeft-feedbacktrigger");
+            //Dynamic css
+            var feedwidth = $feedDrawer.outerWidth();
+            $feedDrawer.css("left", feedwidth * -1 + "px");
+            var trigwidth = $feedTrigger.outerHeight() + feedwidth;
+            $feedTrigger.css("left", trigwidth + "px");
+            //end dynamic css
             $feedTrigger.click(showDrawerLeft);
           }
-          if (position === "bottomRight")
-            $feedTrigger.addClass("bottomRight-feedbacktrigger");
-          $feedTrigger.click(showDrawer);
+
+          if (position === "bottomRight" || position === "centerRight") {
+            //Dynamic css
+            var width = $feedDrawer.outerWidth() * -1;
+            $feedDrawer.css("right", width + "px");
+            var trigwidth = $feedTrigger.outerHeight();
+            $feedTrigger.css("left", trigwidth * -1 + "px");
+            //end dynamic css
+            $feedTrigger.click(showDrawer);
+          }
+
           $feedDrawer.addClass(position);
           // for different frowser
-          $feedDrawer.addClass("isie");
+          // $feedDrawer.addClass("isie");
         });
       }
 
@@ -130,7 +148,7 @@ document.getElementsByTagName("head")[0].appendChild(css);
       }
       // 4 classes "centerRight","bottomRight", "bottomLeft", "centerLeft"
 
-      callDrawer("centerRight", "Ask Alexa to book service");
+      callDrawer("bottomLeft", "Ask Alexa to book service");
     }
   };
 
